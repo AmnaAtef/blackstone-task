@@ -1,0 +1,7 @@
+.avatar-stories{
+    @include avatar;
+    width: 80px;
+    height: 80px;
+    border: 2px solid $primary;
+    padding: 5px;
+}

@@ -1,0 +1,58 @@
+<div class="container mt-5 mb-2">
+     <!-- ICONS -->
+     <div class="row">
+         <div class="col-md-6">
+            <input id="search-input" class="form-control input-lg" placeholder="Search">
+         </div>
+         <div class="col-md-3">
+            <i class="fa fa-bell bell-icon" aria-hidden="true"></i>
+         </div>
+         <div class="col-md-3">
+            <i class="fa fa-cloud-upload upload-icon" aria-hidden="true"></i>
+         </div>
+      
+     </div>
+
+     <!-- SUGGESTION PEOPLE -->
+     <div class="d-flex justify-content-between mt-5">
+         <h6>Suggestions For You</h6>
+         <a href="#" >See All</a>
+     </div>
+
+     <div class="row">
+        <div class="card-body col-md-12 d-flex justify-content-between" *ngFor="let suggestion of suggestionsPeople">
+          <img src="{{suggestion.image}}" class="float-left rounded-circle" width="40" height="40">
+          <div class="message ">
+            <h6 class="card-title ">{{suggestion.title}}</h6>
+            <span class="card-subtitle mb-2 text-muted">{{suggestion.subtitle}}</span>
+          </div> 
+          <button type="button" class="follow-btn">{{suggestion.status}}</button>
+        </div>   
+      </div> <hr>
+
+     <!-- LATEST POST ACTIVITY -->
+     <h5>Latest Post Activity</h5>
+     <div class="card latest-card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+          <img src="../../../../../assets/images/latest.png" class="float-left" width="130">
+          <div class="message">
+            <h5 class="card-title pb-5">Stairs</h5>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+            <div class="actions">
+                <span (click)="likeCount()" class="fa fa-heart p-1 text-danger"></span>
+                    <span>{{count}}</span>
+                
+                <i class="fa fa-commenting text-secondary mx-2" aria-hidden="true">12</i>
+                <i class="fa fa-bookmark text-secondary" aria-hidden="true">8</i>
+              </div>
+          </div>
+            </div>
+         
+        </div>
+      </div>
+      
+
+
+   
+</div>

@@ -1,0 +1,27 @@
+#search-input {
+    border-radius: 23px;
+    color: $secondary;
+    height: 45px;
+} 
+.bell-icon{
+    color: $secondary ;
+    padding: 15px;
+    border: 1px solid $secondary;
+    border-radius: 50%;
+}  
+.upload-icon{
+    color: white ;
+    background-color: #3E82FC;
+    padding: 15px;
+    border-radius: 50%;
+}
+.follow-btn{
+    @include suggestion-btn;
+    background-color: $primary !important;
+    color: white !important;
+}
+.latest-card{
+    border: 3px solid white !important;
+    background-color: inherit !important;
+    border-radius: 28px !important;
+}

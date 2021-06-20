@@ -1,0 +1,10 @@
+@mixin avatar {
+    vertical-align: middle; 
+    border-radius: 50%;
+}
+@mixin suggestion-btn {
+    padding: 0px 15px !important;
+    border-radius: 10px;
+    border: none !important;
+    height: 40px;
+}

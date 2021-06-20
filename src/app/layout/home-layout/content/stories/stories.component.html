@@ -1,0 +1,8 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col" *ngFor="let user of users">
+              <img [src]="user.image" [alt]="user.name" class="avatar-stories">
+              <p class="text-center">{{user.name}}</p>
+        </div>
+    </div>
+</div>

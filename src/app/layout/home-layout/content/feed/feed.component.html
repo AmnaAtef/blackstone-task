@@ -1,0 +1,47 @@
+<div class="container">
+
+       <!-- FILTER ROW -->
+    <div class="row justify-content-between">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <h6>Feeds</h6>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                    <button (click)="filterBy='all'" class="all filter-btn">ALL</button>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                   <button (click)="filterBy='following'" class="following filter-btn">Following</button>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <button (click)="filterBy='newest'" class="newest filter-btn">Newest</button>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <button (click)="filterBy='popular'" class="popular filter-btn">Popular</button>
+                </div>  
+            </div>
+        </div>
+        
+            <!-- IMAGES FEEDS -->
+        <div class="row">    
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3 " *ngFor="let img of (allImages | filterFeeds:filterBy) ">    
+                    <a [routerLink]="['/img', img.id]">    
+                      <img src="{{img.url}}" class="rounded" width="320" height="150">
+                      <div class="d-flex justify-content-between mt-3">
+                          <div>
+                            <img [src]="img.avatar" [alt]="img.name" class="avatar-feeds">
+                            <span class="mx-2">{{img.name}}</span>
+                          </div>
+                          <div> 
+                            <span (click)="likeCount()" class="fa fa-heart p-1 fa-lg text-danger">
+                            </span>
+                            <span>{{count}}</span>
+                          </div>
+                       
+                      </div>      
+                    </a>    
+                  </div>    
+        </div>     
+    </div>
+
+</div>
